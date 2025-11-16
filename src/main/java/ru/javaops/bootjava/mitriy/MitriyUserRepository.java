@@ -16,7 +16,6 @@ public class MitriyUserRepository {
 
     @PersistenceContext
     private EntityManager entityManager;
-
     private JdbcTemplate jdbcTemplate;
 
     public User findUserById(Integer id) {
