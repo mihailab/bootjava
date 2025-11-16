@@ -14,5 +14,7 @@ public class MitriyUserRepositoryRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) {
         System.out.println(mitriyUserRepository.findUserById(1));
+        System.out.println(mitriyUserRepository.findById(1));
+        System.out.println(mitriyUserRepository.findAll());
     }
 }
