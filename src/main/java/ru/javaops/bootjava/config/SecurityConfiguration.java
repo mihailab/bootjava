@@ -46,6 +46,7 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http.authorizeRequests()
+                .antMatchers("/api/account/register").anonymous()
                 .antMatchers("/api/account").hasRole(Role.USER.name())
                 .antMatchers("/api/**").hasRole(Role.ADMIN.name())
                 .antMatchers("/h2-console/**").hasRole(Role.ADMIN.name())
